@@ -121,7 +121,14 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
-
+        # if player.rect.x > x правой стены - player.rect.width:
+        #     player.rect.x = x правой стены - player.rect.width
+        # if player.rect.x < x левой стены
+        #     player.rect.x = x левой стены
+        # if player.rect.y > y нижней стены - player.rect.height:
+        #     player.rect.y = y нинжней стены - player.rect.height
+        # if player.rect.y < y верхней стены
+        #     player.rect.y = y верзней стены
         screen.fill(BLACK)
         platforms, boundary = draw_level(level)
         player.update(platforms, boundary)
